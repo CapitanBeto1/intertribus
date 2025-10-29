@@ -1,3 +1,4 @@
+#estefia
 cuposAjedrezVerde=1
 cuposTrucoVerde=2
 cuposHabilidadesVerde=5
@@ -214,4 +215,4 @@ while True:
             if jugador[1] == "Azul":
                 print(jugador[0])
         
-        print("--------------------")
+       
