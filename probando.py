@@ -2,7 +2,7 @@ cuposAjedrezVerde=1
 cuposTrucoVerde=2
 cuposHabilidadesVerde=5
 cuposTuttiFruttiVerde=4
-
+#a
 cuposAjedrezAzul=1
 cuposTrucoAzul=2
 cuposHabilidadesAzul=5
