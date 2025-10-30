@@ -1,4 +1,4 @@
-
+from inscripciones import inscribirUsuario
 
 # menu
 def main(): 
@@ -12,9 +12,8 @@ def main():
         opcion = input("Seleccione una opción: ")
 
         if opcion == "1":
-            
-
-
+            inscribirUsuario()
+        elif opcion == "2": # 
 
 if __name__ == "__main__":
     main()
