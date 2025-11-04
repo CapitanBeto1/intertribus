@@ -17,7 +17,7 @@ def main():
             inscribirUsuario()
         elif opcion == "2":
             mostrarFixture()
-        elif opcion == "3":
+        elif opcion == "3": 
             mostrarInscriptos()
         elif opcion == "0":
             print("Saliendo del programa.")
