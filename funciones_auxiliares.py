@@ -4,6 +4,7 @@ def pedirDatosUsuario():
     nombre = input("Ingresa tu nombre: ")
     genero = input("Ingresa tu género (1. Masculino / 2. Femenino): ")
     tribu = input("Ingresa tu tribu (1. Verde / 2. Azul): ")
+    carrera = input("Ingresa tu carrera (1. Ed. Fisica / 2. Inglés / 3. Biología / 4. Matemñatica / 5. Historia / 6. Geografía / 7. Programación): ")
 
     if genero == "1":
         genero = "Masculino"
@@ -15,7 +16,7 @@ def pedirDatosUsuario():
     elif tribu == "2":
         tribu = "Azul"
 
-    return nombre, genero, tribu
+    return nombre, genero, tribu, carrera
 
 
 def mostrarJuegos():

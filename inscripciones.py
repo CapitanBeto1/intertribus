@@ -2,7 +2,7 @@ from funciones_auxiliares import pedirDatosUsuario, mostrarJuegos
 from funciones_inscribir import inscribir
 
 def inscribirUsuario():
-    nombre, genero, tribu = pedirDatosUsuario()
+    nombre, genero, tribu, carrera = pedirDatosUsuario()
     inscripciones = 0
 
     while inscripciones < 3:

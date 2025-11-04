@@ -1,7 +1,7 @@
 from datos import *
 
 def mostrarFixture():
-    print("\n==== Fixture de juegos ====")
+    print("\na==== Fixture de juegos ====")
 
     juegos = [("AJEDREZ", inscriptosAjedrez), ("TRUCO", inscriptosTruco), ("HABILIDADES", inscriptosHabilidades), ("TUTTI FRUTTI", inscriptosTuttiFrutti)]
 
