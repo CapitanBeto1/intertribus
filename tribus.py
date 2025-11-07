@@ -1,8 +1,33 @@
 # tribus.py
 
+def obtener_total_inscriptos_por_tribu(conexion, tribu):
+    """
+    Helper que cuenta el total de inscripciones (slots ocupados) 
+    para una tribu específica.
+    """
+    try:
+        cursor = conexion.cursor(buffered=True)
+        query = """
+            SELECT COUNT(i.id_inscripciones) 
+            FROM inscripciones i
+            JOIN usuarios u ON i.Usuarios_idUsuarios = u.idUsuarios
+            WHERE u.tribu_usuario = %s
+        """
+        
+        cursor.execute(query, (tribu,))
+        total = cursor.fetchone()[0]
+        cursor.close()
+        return total
+        
+    except Exception as e:
+        print(f"Error obteniendo el total de inscriptos: {e}")
+        return 0
+
+
 def mostrarInscriptos(conexion):
     """
-    Muestra todos los inscriptos, agrupados por Tribu y luego por Juego.
+    Muestra todos los inscriptos, agrupados por Tribu y luego por Juego,
+    e incluye un total por tribu.
     """
     print("==== Inscriptos ====")
     
@@ -24,6 +49,12 @@ def mostrarInscriptos(conexion):
         print("\n====================")
         print("   TRIBU", tribu.upper())
         print("====================")
+
+        # --- NUEVA LÓGICA AÑADIDA ---
+        # Buscamos el total de inscripciones para esta tribu
+        total_tribu = obtener_total_inscriptos_por_tribu(conexion, tribu)
+        print(f"** Total inscriptos {tribu}: {total_tribu} **")
+        # --- FIN DE LA LÓGICA AÑADIDA ---
 
         for id_juego, nombre_juego in juegos:
             print(f"\n {nombre_juego}:")
