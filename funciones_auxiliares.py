@@ -18,7 +18,7 @@ def pedirDatosUsuario():
 
     return nombre, genero, tribu, carrera
 
-
+# Función para mostrar los cupos disponibles por juego y tribu, de datos.py
 def mostrarJuegos():
     print("--------------------")
     print("Juegos disponibles:")
